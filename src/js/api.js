@@ -1,5 +1,5 @@
 import ToastComponent from './Component.vue'
-import {createComponent} from './helpers';
+import { createComponent } from './helpers';
 import eventBus from './bus.js';
 
 export const useToast = (globalProps = {}) => {
@@ -14,7 +14,7 @@ export const useToast = (globalProps = {}) => {
 
       const propsData = Object.assign({}, defaultProps, globalProps, options);
 
-      const instance = createComponent(ToastComponent, propsData, document.body);
+      const instance = createComponent(ToastComponent, propsData, document.getElementById('serviceAnalyticalReport'));
 
       return {
         dismiss: instance.ctx.dismiss
